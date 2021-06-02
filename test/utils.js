@@ -1,10 +1,13 @@
+import imp_utilsjs from "../lib/utils";
+import ext_saferbuffer from "safer-buffer";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2011 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
-var Buffer = require('safer-buffer').Buffer;
+var test = ext_tape.test;
+var Buffer = ext_saferbuffer.Buffer;
 
-var utils = require('../lib/utils');
+var utils = imp_utilsjs;
 
 test('bufferSplit single char', function(t) {
 	var b = Buffer.from('abc 123 xyz ttt');

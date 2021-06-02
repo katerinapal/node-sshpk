@@ -1,14 +1,21 @@
+import ext_saferbuffer from "safer-buffer";
+import ext_sinon from "sinon";
+import ext_crypto from "crypto";
+import ext_path from "path";
+import ext_fs from "fs";
+import imp_indexjs from "../lib/index";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2015 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
+var test = ext_tape.test;
 
-var sshpk = require('../lib/index');
-var fs = require('fs');
-var path = require('path');
-var crypto = require('crypto');
-var sinon = require('sinon');
-var Buffer = require('safer-buffer').Buffer;
+var sshpk = imp_indexjs;
+var fs = ext_fs;
+var path = ext_path;
+var crypto = ext_crypto;
+var sinon = ext_sinon;
+var Buffer = ext_saferbuffer.Buffer;
 
 var ED_KEY, ED2_KEY, EC_KEY, EC2_KEY, ECOUT_KEY, DS_KEY, DS2_KEY, DSOUT_KEY;
 var C_KEY, C2_KEY;

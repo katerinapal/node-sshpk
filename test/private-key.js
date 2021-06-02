@@ -1,10 +1,14 @@
+import ext_fs from "fs";
+import ext_path from "path";
+import imp_indexjs from "../lib/index";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2017 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
-var sshpk = require('../lib/index');
-var path = require('path');
-var fs = require('fs');
+var test = ext_tape.test;
+var sshpk = imp_indexjs;
+var path = ext_path;
+var fs = ext_fs;
 
 var testDir = path.join(__dirname, 'assets');
 

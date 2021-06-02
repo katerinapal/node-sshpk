@@ -1,9 +1,11 @@
+import imp_indexjs from "../lib/index";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2011 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
+var test = ext_tape.test;
 
-var sshpk = require('../lib/index');
+var sshpk = imp_indexjs;
 
 var SSH_1024 = 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAvad19ePSDckmgmo6Unqmd8' +
 	'n2G7o1794VN3FazVhV09yooXIuUhA+7OmT7ChiHueayxSubgL2MrO/HvvF/GGVUs/t3e0u4' +
