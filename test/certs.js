@@ -1,15 +1,23 @@
+import imp_SSHBuffer from "../lib/ssh-buffer";
+import ext_asn1 from "asn1";
+import ext_sinon from "sinon";
+import ext_crypto from "crypto";
+import ext_path from "path";
+import ext_fs from "fs";
+import imp_indexjs from "../lib/index";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2018 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
+var test = ext_tape.test;
 
-var sshpk = require('../lib/index');
-var fs = require('fs');
-var path = require('path');
-var crypto = require('crypto');
-var sinon = require('sinon');
-var asn1 = require('asn1');
-var SSHBuffer = require('../lib/ssh-buffer');
+var sshpk = imp_indexjs;
+var fs = ext_fs;
+var path = ext_path;
+var crypto = ext_crypto;
+var sinon = ext_sinon;
+var asn1 = ext_asn1;
+var SSHBuffer = imp_SSHBuffer;
 
 var testDir = path.join(__dirname, 'assets');
 
