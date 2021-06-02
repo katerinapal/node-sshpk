@@ -1,12 +1,17 @@
+import ext_saferbuffer from "safer-buffer";
+import imp_indexjs from "../lib/index";
+import ext_fs from "fs";
+import ext_path from "path";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2011 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
-var path = require('path');
-var fs = require('fs');
+var test = ext_tape.test;
+var path = ext_path;
+var fs = ext_fs;
 
-var sshpk = require('../lib/index');
-var Buffer = require('safer-buffer').Buffer;
+var sshpk = imp_indexjs;
+var Buffer = ext_saferbuffer.Buffer;
 
 ///--- Globals
 var SSH_1024 = 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAvad19ePSDckmgmo6Unqmd8' +

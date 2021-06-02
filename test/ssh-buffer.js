@@ -1,9 +1,12 @@
+import ext_saferbuffer from "safer-buffer";
+import imp_SSHBuffer from "../lib/ssh-buffer";
+import ext_tape from "tape";
 "use strict";
 // Copyright 2015 Joyent, Inc.  All rights reserved.
 
-var test = require('tape').test;
-var SSHBuffer = require('../lib/ssh-buffer');
-var Buffer = require('safer-buffer').Buffer;
+var test = ext_tape.test;
+var SSHBuffer = imp_SSHBuffer;
+var Buffer = ext_saferbuffer.Buffer;
 
 test('expands on write', function(t) {
 	var buf = new SSHBuffer({buffer: Buffer.alloc(8)});
