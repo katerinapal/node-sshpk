@@ -1,3 +1,4 @@
+"use strict";
 // Copyright 2017 Joyent, Inc.	All rights reserved.
 
 var test = require('tape').test;

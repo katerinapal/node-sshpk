@@ -1,3 +1,4 @@
+"use strict";
 // Copyright 2018 Joyent, Inc.  All rights reserved.
 
 var test = require('tape').test;
@@ -16,6 +17,7 @@ var GEORGE_KEY, GEORGE_SSH, GEORGE_X509;
 var BARRY_KEY;
 var JIM_KEY, JIM_SSH, JIM_X509, JIM_X509_TXT;
 var EC_KEY, EC_KEY2;
+var EC2_KEY;
 var SUE_KEY;
 
 test('setup', function (t) {
