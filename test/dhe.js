@@ -157,8 +157,11 @@ test('ecdhe reject diff curves', function (t) {
 });
 
 /* node 0.10 and earlier do not support DHE properly */
+// if (process.version.match(/^v0\.10\./))
+// 	return;
+
 if (process.version.match(/^v0\.10\./))
-	return;
+	process.exit();
 
 test('dhe shared secret', function (t) {
 	var dh1 = DS_KEY.createDiffieHellman();

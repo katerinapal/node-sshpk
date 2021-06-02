@@ -385,8 +385,11 @@ test('pkcs8 PrivateKey without public part', function (t) {
 	t.end();
 });
 
+// if (process.version.match(/^v0\.[0-9]\./))
+// 	return;
+
 if (process.version.match(/^v0\.[0-9]\./))
-	return;
+	process.exit();
 
 test('PrivateKey.generate ed25519', function (t) {
 	var key = sshpk.generatePrivateKey('ed25519');

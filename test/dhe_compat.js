@@ -12,8 +12,11 @@ var sinon = require('sinon');
 var Buffer = require('safer-buffer').Buffer;
 
 /* No need to do these on an older node */
+// if (crypto.createECDH === undefined)
+// 	return;
+
 if (crypto.createECDH === undefined)
-	return;
+	process.exit();
 
 var ED_KEY, ED2_KEY, EC_KEY, EC2_KEY, ECOUT_KEY, DS_KEY, DS2_KEY, DSOUT_KEY;
 var C_KEY, C2_KEY;

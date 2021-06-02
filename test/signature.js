@@ -221,8 +221,11 @@ test('convert full wire SSH ECDSA-384 sig and verify', function(t) {
 	t.end();
 });
 
+// if (process.version.match(/^v0\.[0-9]\./))
+// 	return;
+
 if (process.version.match(/^v0\.[0-9]\./))
-	return;
+	process.exit();
 
 test('parse ED25519 sig in full wire SSH format and verify', function(t) {
 	var sig = sshpk.parseSignature(ED25519_SIG_SSH, 'ed25519', 'ssh');
